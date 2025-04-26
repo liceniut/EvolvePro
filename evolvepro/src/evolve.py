@@ -385,6 +385,7 @@ def evolve_experimental(
     
     # Load embeddings
     embeddings = load_experimental_embeddings(embeddings_base_path, embeddings_file_name, rename_WT)
+    embeddings = pca_embeddings(embeddings, n_components=20)
     print(f"Embeddings loaded: {embeddings.shape}")
     
     # Load experimental data
